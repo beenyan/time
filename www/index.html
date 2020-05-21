@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>計時器</title>
+  </head>
+  <body>
+    <div id="background">
+      <div id="main">
+        <div>
+          <span id="big">00:00:00</span>
+          <span id="middle">.949</span>
+        </div>
+        <div>
+          <span id="small">00:00:02</span>
+          <span id="slime">.245</span>
+        </div>
+        <div>
+          <div>
+            <button>繼續</button>
+            <button class="split">分割</button>
+            <button>重置</button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span>次數</span>
+            <span>花費時間</span>
+            <span>總時間</span>
+          </div>
+        </div>
+        <div>內容</div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script> <!-- 程式碼 -->
+  </body>
+</html>
+

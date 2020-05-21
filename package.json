@@ -21,13 +21,13 @@
 		],
 		"asar": false,  
 		"win": {
-		  	"icon": "assets/icon.png"
+		  	"icon": "www/img/icon.png"
 		},
 		"mac": {
-		  	"icon": "assets/icon.png"
+		  	"icon": "www/img/icon.png"
 		},
 		"linux": {
-		  	"icon": "assets/icon.png"
+		  	"icon": "www/img/icon.png"
 		}
 	},
   "repository": "https://github.com/electron/electron-quick-start",

@@ -1,0 +1,72 @@
+*::-webkit-scrollbar{
+    display: none;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: #E4E6EB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, '微軟正黑體';
+}
+#background{
+    position: relative;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-color: #18191a;
+    border-radius: 50px;
+    border: 5px solid #393A3B;
+    overflow: hidden;
+    -webkit-app-region: drag;
+}
+#background[nomove]::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100vw;
+    height: 100vw;
+    background-color: #00000000;
+    -webkit-app-region: no-drag;
+}
+#background * {
+    -webkit-app-region: no-drag;
+}
+#main{
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-rows: 80px auto auto auto auto;
+    grid-gap: 5px;
+    align-items: center;
+    text-align: center;
+    margin: 20px 20px;
+}
+#big{
+    position: relative;
+    font-size: 75px;
+}
+#middle{
+    font-size: 25px;
+}
+#small{
+    color: #00b4b4;
+    font-size: 23px;
+}
+#slime{
+    color: #00b4b4;
+    font-size: 15px;
+}
+button{
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 120px;
+    height: 60px;
+    color: #E4E6EB;
+    background-color: #2E2E2E;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: inset .1px .1px rgb(100, 102, 104), 20px 2px 2px #18191A;
+}
+.split{
+    margin: 0 12px;
+}
