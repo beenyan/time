@@ -3,6 +3,7 @@
 }
 html,body{
     width: 100vw;
+    height: 100vh;
     margin: 0;
     color: #E4E6EB;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, '微軟正黑體';
@@ -69,7 +70,7 @@ button{
     outline: none;
 }
 #split{
-    margin: 0 8px;
+    margin: 0 12px;
 }
 #title{
     display: grid;
