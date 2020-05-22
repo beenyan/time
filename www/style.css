@@ -69,12 +69,30 @@ button{
     box-shadow: inset 3px 3px rgb(100, 102, 104), 2px 2px 3px #18191A;
     outline: none;
 }
-.split{
+#split{
     margin: 0 12px;
 }
 #title{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 80px 140px 140px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.list{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 100px 130px 130px;
     font-size: 25px;
     margin-top: 10px;
+    border-top: 2px solid rgb(216, 211, 201);
+}
+.split_main_text{
+    font-size: 23px;
+}
+.split_sub_text{
+    font-size: 12px;
+}
+.set_ans{
+    width: 360px;
+    display: inline-block;
 }

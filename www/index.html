@@ -14,31 +14,36 @@
       <div id="main">
         <div>
           <span id="big">00:00:00</span>
-          <span id="middle">.00</span>
+          <span id="middle">.000</span>
         </div>
         <div>
-          <span id="small">00:00:02</span>
-          <span id="slime">.245</span>
+          <span id="small">00:00:00</span>
+          <span id="slime">.000</span>
         </div>
         <div>
           <div>
-            <button>繼續</button>
-            <button class="split">分割</button>
-            <button>重置</button>
+            <button id="start">開始</button>
+            <button id="split">分割</button>
+            <button id="reset">重置</button>
           </div>
         </div>
         <div>
-          <div id="title">
-            <span>次數</span>
-            <span>花費時間</span>
-            <span>總時間</span>
+          <div class="set_ans">
+            <div id="title">
+              <span>間段</span>
+              <span>間段時間</span>
+              <span>總時間</span>
+            </div>
           </div>
         </div>
-        <div>內容</div>
+        <div>
+          <div id="split_place" class="set_ans"></div>
+        </div>
       </div>
     </div>
-    <script src="./function.js"></script>
+    <script src="./function.js"></script> <!-- function -->
     <script src="./renderer.js"></script> <!-- 程式碼 -->
+    <script src="./object.js"></script>   <!-- 物件觸發 -->
   </body>
 </html>
 
