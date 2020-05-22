@@ -13,7 +13,7 @@ html,body{
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    background-color: #18191a;
+    background-color: #18191a80;
     border-radius: 50px;
     border: 5px solid #393A3B;
     overflow: hidden;
@@ -62,11 +62,19 @@ button{
     width: 120px;
     height: 60px;
     color: #E4E6EB;
+    border: none;
     background-color: #2E2E2E;
     font-size: 30px;
     border-radius: 10px;
-    box-shadow: inset .1px .1px rgb(100, 102, 104), 20px 2px 2px #18191A;
+    box-shadow: inset 3px 3px rgb(100, 102, 104), 2px 2px 3px #18191A;
+    outline: none;
 }
 .split{
     margin: 0 12px;
+}
+#title{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 25px;
+    margin-top: 10px;
 }
