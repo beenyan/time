@@ -11,7 +11,6 @@ function createWindow () {
     transparent: true, //設置透明背景
     resizable: false, //禁止改變視窗大小
     alwaysOnTop: true, //永遠置頂
-    backgroundColor: "#00000000",
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     }

@@ -29,6 +29,7 @@ $('body').on('click','#split', () => {
 $('body').on('click','#reset', () => {
     start = 0;
     $('.list').remove();
+    $('#start').text('繼續');
     $('#big').text('00:00:00');
     $('#middle').text('.000');
     $('#small').text('00:00:00');

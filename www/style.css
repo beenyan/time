@@ -3,7 +3,6 @@
 }
 html,body{
     width: 100vw;
-    height: 100vh;
     margin: 0;
     color: #E4E6EB;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, '微軟正黑體';
@@ -11,25 +10,25 @@ html,body{
 #background{
     position: relative;
     box-sizing: border-box;
-    width: 100vw;
     height: 100vh;
-    background-color: #18191a80;
+    width: 100vw;
+    background-color: #18191ade;
     border-radius: 50px;
     border: 5px solid #393A3B;
     overflow: hidden;
-    -webkit-app-region: drag;
 }
-#background[nomove]::before{
-    content: '';
-    position: absolute;
+#item{
+    position: fixed;
     display: inline-block;
-    width: 100vw;
-    height: 100vw;
-    background-color: #00000000;
-    -webkit-app-region: no-drag;
-}
-#background * {
-    -webkit-app-region: no-drag;
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 50%;
+    cursor: pointer;
+    left: 20px;
+    top: 20px;
+    z-index: 10;
+    -webkit-app-region: drag;
 }
 #main{
     box-sizing: border-box;
@@ -70,7 +69,7 @@ button{
     outline: none;
 }
 #split{
-    margin: 0 12px;
+    margin: 0 8px;
 }
 #title{
     display: grid;
@@ -95,4 +94,8 @@ button{
 .set_ans{
     width: 360px;
     display: inline-block;
+}
+#split_place{
+    max-height: 315px;
+    overflow: auto;
 }
