@@ -1,13 +1,7 @@
-let now_time = {
-    hour: "00",
-    minute: "00",
-    second: "00",
-    millisecond: "000"
-}
+let set_time = +new Date();
 let increase = 0;
 setInterval(e => {
-    increase+=10;
-    settime();
-    $("#big").text(`${now_time.hour}:${now_time.minute}:${now_time.second}`);
-    $("#middle").text(`.${now_time.millisecond}`);
-},10);
+    let count_time = +new Date() - set_time;
+    $("#big").text(`${fill_zero(parseInt(count_time / 3600000) % 60,2)}:${fill_zero(parseInt(count_time / 60000) % 60,2)}:${fill_zero(parseInt(count_time / 1000) % 60,2)}`);
+    $("#middle").text(`.${fill_zero(count_time % 1000,3)}`);
+},1);
