@@ -39,7 +39,7 @@
     "demo"
   ],
   "author": "聖冰如焰",
-  "license": "CC0-1.0",
+  "license": "CC BY-NC-SA 3.0 TW",
   "devDependencies": {
     "electron": "^8.3.0",
     "electron-builder": "^22.6.1"
