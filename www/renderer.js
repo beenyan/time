@@ -7,7 +7,8 @@ let main_time = 0,              //開始計時的時間(主要)
     different_sub_time = 0,     //時間差(分割)
     temp,                       //各類暫存
     start = 0,                  //判斷是否開始計時
-    split_index = 1
+    split_index = 1,            //紀錄分割幾次
+    reset = 1                   //重製|跳題
 
 setInterval(e => {
     if (!start) return false;
