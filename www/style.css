@@ -1,6 +1,4 @@
-*::-webkit-scrollbar{
-    display: none;
-}
+*::-webkit-scrollbar{ display: none}
 *{
     user-select: none;
     -webkit-app-region: drag;
@@ -36,9 +34,7 @@ html,body{
     position: relative;
     font-size: 75px;
 }
-#middle{
-    font-size: 25px;
-}
+#middle{ font-size: 25px }
 #small{
     color: #00b4b4;
     font-size: 23px;
@@ -47,9 +43,7 @@ html,body{
     color: #00b4b4;
     font-size: 15px;
 }
-#split{
-    margin: 0 12px;
-}
+#split{ margin: 0 12px }
 #title{
     display: grid;
     grid-template-columns: 80px 140px 140px;
@@ -83,12 +77,8 @@ html,body{
     transform-origin: center;
     overflow: hidden;
 }
-.split_main_text{
-    font-size: 23px;
-}
-.split_sub_text{
-    font-size: 12px;
-}
+.split_main_text{ font-size: 23px }
+.split_sub_text{ font-size: 12px }
 .set_ans{
     width: 360px;
     display: inline-block;
@@ -97,9 +87,7 @@ html,body{
     max-height: 315px;
     overflow: auto;
 }
-#split_place,#split_place * {
-    -webkit-app-region: no-drag;
-}
+#split_place,#split_place * { -webkit-app-region: no-drag }
 button{
     cursor: pointer;
     position: relative;
@@ -120,24 +108,15 @@ button::after,button::before{
     position: absolute;
 }
 @keyframes rotate_left{
-    0% {
-        transform: translate(-50%,-50%) rotate(0deg) ;
-    }
-    100% {
-        transform: translate(-50%,-50%) rotate(360deg) ;
-    }
+    0% { transform: translate(-50%,-50%) rotate(0deg) }
+    100% { transform: translate(-50%,-50%) rotate(360deg) }
 }
 @keyframes rotate_right{
-    0% {
-        transform: translate(-50%,-50%) rotate(0deg) ;
-    }
-    100% {
-        transform: translate(-50%,-50%) rotate(-360deg) ;
-    }
+    0% { transform: translate(-50%,-50%) rotate(0deg) }
+    100% { transform: translate(-50%,-50%) rotate(-360deg) }
 }
 #start{
     background-color: #00000000;
-    /*background-color: rgb(201, 74, 116);*/
     border: 1px solid #00000000;
     overflow: unset;
 }
@@ -172,9 +151,7 @@ button::after,button::before{
     animation-timing-function: linear;
 }
 @keyframes run_left{
-    0%{
-        left: -20px;
-    }
+    0%{ left: -20px }
     50%{
         left: 50%;
         transform: translate(-50%,-50%);
@@ -185,9 +162,7 @@ button::after,button::before{
     }
 }
 @keyframes run_right{
-    0%{
-        left: calc(100% + 20px);
-    }
+    0%{ left: calc(100% + 20px) }
     50%{
         left: 50%;
         transform: translate(-50%,-50%);
@@ -220,18 +195,10 @@ button::after,button::before{
     animation-duration: 0.8s;
     animation-fill-mode: both;
 }
-#split::before{
-    left: -20px;
-}
-#split::after{
-    left: calc(100% + 20px);
-}
-#split:hover::before{
-    animation-name: run_left;
-}
-#split:hover::after{
-    animation-name: run_right;
-}
+#split::before{ left: -20px }
+#split::after{ left: calc(100% + 20px) }
+#split:hover::before{ animation-name: run_left }
+#split:hover::after{ animation-name: run_right }
 #reset{
     transition: .4s;
     background-color: rgba(46, 46, 46, 0.424);
@@ -239,9 +206,7 @@ button::after,button::before{
     color: rgb(0, 131, 118);
     overflow: unset;
 }
-#reset:hover{
-    color: rgb(204, 216, 215);
-}
+#reset:hover{ color: rgb(204, 216, 215) }
 #reset::before{
     transition: .4s;
     position: absolute;
