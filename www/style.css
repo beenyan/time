@@ -17,7 +17,7 @@ html,body{
     box-sizing: border-box;
     height: 100vh;
     width: 100vw;
-    background-color: #18191ade;
+    background-color: #18191a93;
     border-radius: 50px;
     border: 5px solid #393A3B;
     overflow: hidden;
@@ -47,20 +47,6 @@ html,body{
     color: #00b4b4;
     font-size: 15px;
 }
-button{
-    cursor: pointer;
-    box-sizing: border-box;
-    width: 120px;
-    height: 60px;
-    color: #E4E6EB;
-    border: none;
-    background-color: #2E2E2E;
-    font-size: 30px;
-    border-radius: 10px;
-    box-shadow: inset 3px 3px rgb(100, 102, 104), 2px 2px 3px #18191A;
-    outline: none;
-    -webkit-app-region: no-drag;
-}
 #split{
     margin: 0 12px;
 }
@@ -70,6 +56,18 @@ button{
     font-size: 20px;
     margin-top: 10px;
 }
+@keyframes show{
+    0%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
 .list{
     box-sizing: border-box;
     display: grid;
@@ -78,6 +76,12 @@ button{
     margin-top: 10px;
     border-top: 2px solid rgb(216, 211, 201);
     cursor: pointer;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    color: rgb(211, 211, 211);
+    transform-origin: center;
+    overflow: hidden;
 }
 .split_main_text{
     font-size: 23px;
@@ -92,8 +96,184 @@ button{
 #split_place{
     max-height: 315px;
     overflow: auto;
+}
+#split_place,#split_place * {
     -webkit-app-region: no-drag;
 }
-#split_place * {
+button{
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    width: 120px;
+    height: 60px;
+    color: #E4E6EB;
+    font-size: 30px;
+    outline: none;
     -webkit-app-region: no-drag;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: bold;
 }
+button::after,button::before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+}
+@keyframes rotate_left{
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg) ;
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg) ;
+    }
+}
+@keyframes rotate_right{
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg) ;
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(-360deg) ;
+    }
+}
+#start{
+    background-color: #00000000;
+    /*background-color: rgb(201, 74, 116);*/
+    border: 1px solid #00000000;
+    overflow: unset;
+}
+#start::before,#start::after{
+    transition: .2s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 60px;
+    border: 1px solid rgba(201, 74, 116,0.5);
+    box-sizing: border-box;
+    transform-origin: center;
+    background-color: rgba(46, 46, 46, 0.212);
+}
+#start:hover::before,#start:hover::after{
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(201, 74, 116,1);
+}
+#start:hover::before{
+    animation: rotate_left;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#start:hover::after{
+    animation: rotate_right;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes run_left{
+    0%{
+        left: -20px;
+    }
+    50%{
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        left: 50%;
+        transform: translate(-50%,-50%) scale(10,10);
+    }
+}
+@keyframes run_right{
+    0%{
+        left: calc(100% + 20px);
+    }
+    50%{
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        left: 50%;
+        transform: translate(-50%,-50%) scale(10,10);
+    }
+}
+#split{
+    border: 1px solid rgb(167, 78, 196);
+    color: rgb(167, 78, 196);
+    background-color: rgba(46, 46, 46, 0.424);
+}
+#split:hover{
+    transition: 1s;
+    color: #E5CBEE;
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+#split::before,#split::after{
+    transition: 0.8s;
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #972FB9;
+    transform: translateY(-50%) scale(1);
+    top: 50%;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+#split::before{
+    left: -20px;
+}
+#split::after{
+    left: calc(100% + 20px);
+}
+#split:hover::before{
+    animation-name: run_left;
+}
+#split:hover::after{
+    animation-name: run_right;
+}
+#reset{
+    transition: .4s;
+    background-color: rgba(46, 46, 46, 0.424);
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: rgb(0, 131, 118);
+    overflow: unset;
+}
+#reset:hover{
+    color: rgb(204, 216, 215);
+}
+#reset::before{
+    transition: .4s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 60px;
+    border: 1px solid rgb(0, 107, 96);
+    box-sizing: border-box;
+    transform-origin: center;
+}
+#reset::after{
+    transition-duration: .4s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+    width: 120px;
+    height: 60px;
+    box-sizing: border-box;
+    transform-origin: center;
+    background-color: rgb(0, 131, 118);
+    opacity: 0;
+}
+#reset:hover::before{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+#reset:hover::after{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+

@@ -26,8 +26,8 @@ function createWindow () {
   let window_size = mainWindow.getSize()
   // 設定值
   mainWindow.setBounds({
-    x: screen_size.width - window_size[0] -100,
-    y: screen_size.height - window_size[1] -100
+    x: screen_size.width - window_size[0],
+    y: screen_size.height - window_size[1]
   })
 
 }

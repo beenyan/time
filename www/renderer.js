@@ -10,7 +10,7 @@ let main_time = 0,              //開始計時的時間(主要)
     split_index = 1,            //紀錄分割幾次
     reset = 1                   //重製|跳題
 
-setInterval(e => {
+setInterval(() => {
     if (!start) return false;
     different_time = +new Date() - main_time;
     different_sub_time = +new Date() - sub_time;

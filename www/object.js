@@ -6,7 +6,8 @@ $('body').on('click','#start', () => {
     $('#start').text((start)?'暫停':'繼續');
     $('#reset').text((reset)?'跳題':'重置');
 })
-$('body').on('click','#split', () => {
+$('body').on('click','#split', () => { //分割
+    if (!different_time||!different_sub_time) return false; //總時間或分割時間為0 不進行分割
     let main = get_time(different_time);
     let sub = get_time(different_sub_time);
     $('#split_place').append(`
