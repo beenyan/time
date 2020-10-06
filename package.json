@@ -41,7 +41,7 @@
   "author": "聖冰如焰",
   "license": "CC BY-NC-SA 3.0 TW",
   "devDependencies": {
-    "electron": "^8.3.0",
+    "electron": "^8.5.1",
     "electron-builder": "^22.6.1"
   },
   "dependencies": {}
